@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+for(i=1;i<=100;i++)
+{
+var printContent;
+printContent = checkMultiple(i);
+document.write(printContent + "</br>");
+}
+
+function checkMultiple(Number)
+{
+
+var printingContent = "";
+var checkThreeMultiple = Number/3 % 1;
+var checkFiveMultiple = Number/5 % 1;
+
+if(checkThreeMultiple == 0)
+{
+printingContent = "Fizz";
+}
+
+if(checkFiveMultiple == 0)
+{
+printingContent += "Buzz";
+}
+else
+{
+	if(printingContent!="Fizz")
+	{
+		printingContent = Number;
+	}
+
+}
+
+return printingContent;
+}
+
+</script>
+</head>
+</body>
+</html>
